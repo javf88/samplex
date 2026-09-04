@@ -4,3 +4,9 @@
 [submodule "ext/netxduo"]
 	path = ext/netxduo
 	url = https://github.com/eclipse-threadx/netxduo.git
+[submodule "ext/nanoprintf"]
+	path = ext/nanoprintf
+	url = https://github.com/charlesnicholson/nanoprintf.git
+[submodule "ext/jsmn"]
+	path = ext/jsmn
+	url = https://github.com/zserge/jsmn.git
