@@ -19,8 +19,8 @@ set(NX_USER_FILE "${CMAKE_CURRENT_LIST_DIR}/netxduo/nx_user.h" CACHE STRING "Ena
 set(NXD_ENABLE_FILE_SERVERS OFF CACHE BOOL "Disable fileX dependency by netxduo")
 
 # Core libraries
-add_subdirectory(${SHARED_LIB_DIR}/threadx threadx)
-add_subdirectory(${SHARED_LIB_DIR}/netxduo netxduo)
+add_subdirectory(${CMAKE_SOURCE_DIR}/ext/threadx threadx)
+add_subdirectory(${CMAKE_SOURCE_DIR}/ext/netxduo netxduo)
 add_subdirectory(${SHARED_LIB_DIR}/jsmn jsmn)
 add_subdirectory(${SHARED_LIB_DIR}/nanoprintf nanoprintf)
 
