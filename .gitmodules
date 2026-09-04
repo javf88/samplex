@@ -1,0 +1,6 @@
+[submodule "ext/threadx"]
+	path = ext/threadx
+	url = https://github.com/eclipse-threadx/threadx.git
+[submodule "ext/netxduo"]
+	path = ext/netxduo
+	url = https://github.com/eclipse-threadx/netxduo.git
