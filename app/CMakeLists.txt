@@ -1,4 +1,3 @@
-#  Copyright (c) Microsoft
 #  Copyright (c) 2024 Eclipse Foundation
 # 
 #  This program and the accompanying materials are made available 
@@ -81,7 +80,6 @@ target_link_libraries(${PROJECT_NAME}
     stm32cubef4
     mxchip_bsp
     app_common
-    jsmn
     wiced_sdk
     nanoprintf
 )

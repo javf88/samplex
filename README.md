@@ -17,6 +17,14 @@
 
 # 
 
+```
+brew install --cask gcc-arm-embedded
+
+git submodule init
+git submodule update --recursive
+```
+
+
 # ARCHIVED
 # Eclipse ThreadX IoT DevKit Starter Application
 

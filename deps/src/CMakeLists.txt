@@ -30,6 +30,5 @@ add_library(${TARGET} OBJECT
 target_link_libraries(${TARGET}
     azrtos::threadx
     azrtos::netxduo
-    jsmn
     nanoprintf
 )
