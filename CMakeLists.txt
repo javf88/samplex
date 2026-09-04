@@ -34,4 +34,3 @@ project(mxchip_threadx C CXX ASM)
 add_subdirectory(${SHARED_SRC_DIR} shared_src)
 add_subdirectory(lib)
 add_subdirectory(app)
-
