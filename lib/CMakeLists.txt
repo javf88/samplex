@@ -21,7 +21,6 @@ set(NXD_ENABLE_FILE_SERVERS OFF CACHE BOOL "Disable fileX dependency by netxduo"
 # Core libraries
 add_subdirectory(${CMAKE_SOURCE_DIR}/ext/threadx threadx)
 add_subdirectory(${CMAKE_SOURCE_DIR}/ext/netxduo netxduo)
-add_subdirectory(${SHARED_LIB_DIR}/nanoprintf nanoprintf)
 
 add_subdirectory(stm32cubef4)
 add_subdirectory(mxchip_bsp)

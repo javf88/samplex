@@ -81,7 +81,6 @@ target_link_libraries(${PROJECT_NAME}
     mxchip_bsp
     app_common
     wiced_sdk
-    nanoprintf
 )
 
 target_include_directories(${PROJECT_NAME} 
