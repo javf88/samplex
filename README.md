@@ -22,6 +22,21 @@ brew install --cask gcc-arm-embedded
 
 git submodule init
 git submodule update --recursive
+
+
+cmake -B build -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+cmake -G Ninja -B build -DCMAKE_POLICY_VERSION_MINIMUM=3.5
+
+cmake --build build
+./script/build.sh
+
+or
+
+cp build/app/*bin /Volumes/AZ3166
+
+or
+
+./scripts/deploy.sh
 ```
 
 

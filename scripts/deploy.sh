@@ -1,24 +1,26 @@
 #!/bin/bash
 
-# Change the path to where the AZ3166 is mounted on your system.
-DESTINATION=${1:-/Volumes/AZ3166}
-
 # Get the absolute path to the AZ3166 directory
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-BUILD_DIR="$(cd "${SCRIPT_DIR}/../build" && pwd)"
+# TODO to validate ${1} as target dir
+SAMPLEX_TARGET_DIR=${1:-/Volumes/AZ3166}
 
-if [ ! -d "${DESTINATION}" ]; then
-    echo "[ERROR] Destination ${DESTINATION} does not exist!"
+if [ ! -d "${SAMPLEX_TARGET_DIR}" ]; then
+    echo "[ERROR] Destination ${SAMPLEX_TARGET_DIR} does not exist!"
     exit 1
+else
+    echo "[INFO] Target is ${SAMPLEX_TARGET_DIR}"
 fi
 
-BINARY=$(ls ${BUILD_DIR}/app/*.bin | head -n 1)
+# Get the absolute path to the build directory
+SAMPLEX_BUILD_DIR="$PWD/build"
+# TODO this might be improved for error handling
+SAMPLEX_BINARY=$(ls ${SAMPLEX_BUILD_DIR}/app/*.bin)
 
-if [ -f "${BINARY}" ]; then
-    echo "[INFO] Copying ${BINARY} to ${DESTINATION}..."
-    cp "${BINARY}" "${DESTINATION}"
-    echo "[OK] Deployment successful!"
+if [ -f "${SAMPLEX_BINARY}" ]; then
+    echo "[INFO] Copying ${SAMPLEX_BINARY} to ${SAMPLEX_TARGET_DIR}..."
+    cp "${SAMPLEX_BINARY}" "${SAMPLEX_TARGET_DIR}"
+    echo "[ OK ] Deployment successful!"
 else
-    echo "[ERROR] No binary found in ${BUILD_DIR}/app/*.bin"
+    echo "[ERROR] No binary found in ${SAMPLEX_BUILD_DIR}/app/*.bin"
     exit 1
 fi
