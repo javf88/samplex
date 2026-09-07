@@ -14,10 +14,6 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
 set(CMAKE_C_STANDARD 99)
 
-set(DEPS_DIR ${CMAKE_SOURCE_DIR}/deps)
-set(SHARED_SRC_DIR ${DEPS_DIR}/src)
-set(SHARED_LIB_DIR ${DEPS_DIR}/lib)
-
 # Set the toolchain if not defined
 if(NOT CMAKE_TOOLCHAIN_FILE)
     set(CMAKE_TOOLCHAIN_FILE "${CMAKE_SOURCE_DIR}/cmake/arm-gcc-cortex-m4.cmake")
@@ -31,6 +27,5 @@ include(utilities)
 # CXX enables IntelliSense only. Sources are still compiled as C.
 project(mxchip_threadx C CXX ASM)
 
-add_subdirectory(${SHARED_SRC_DIR} shared_src)
 add_subdirectory(lib)
 add_subdirectory(app)
