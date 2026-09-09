@@ -27,5 +27,13 @@ include(utilities)
 # CXX enables IntelliSense only. Sources are still compiled as C.
 project(mxchip_threadx C CXX ASM)
 
+add_library(nano INTERFACE)
+
+target_include_directories(nano
+    INTERFACE ${CMAKE_CURRENT_SOURCE_DIR}/ext/nanoprintf)
+
+target_compile_definitions(nano
+    INTERFACE NANOPRINTF_IMPLEMENTATION)
+
 add_subdirectory(lib)
 add_subdirectory(app)
