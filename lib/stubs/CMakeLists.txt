@@ -11,7 +11,7 @@
 #     Microsoft         - Initial version
 #     Frédéric Desbiens - 2024 version.
 
-set(TARGET app_common)
+set(TARGET stubs)
 
 # Initialize sources
 set(SOURCES "")

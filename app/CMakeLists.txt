@@ -80,7 +80,7 @@ target_link_libraries(${PROJECT_NAME}
 
     stm32cubef4
     mxchip_bsp
-    app_common
+    stubs
     nano
 )
 
