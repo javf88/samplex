@@ -74,13 +74,13 @@ endif()
 add_executable(${PROJECT_NAME} ${SOURCES})
 
 target_link_libraries(${PROJECT_NAME}
+    wiced_sdk
     azrtos::threadx
     azrtos::netxduo
 
     stm32cubef4
     mxchip_bsp
     app_common
-    wiced_sdk
     nano
 )
 

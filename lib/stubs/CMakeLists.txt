@@ -24,10 +24,4 @@ if(NOT DEFINED DISABLE_NEWLIB_STUB)
 endif()
 
 add_library(${TARGET} OBJECT
-    ${SOURCES}
-)
-
-target_link_libraries(${TARGET}
-    azrtos::threadx
-    azrtos::netxduo
-)
+    ${SOURCES})
