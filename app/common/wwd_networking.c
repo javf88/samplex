@@ -20,7 +20,7 @@
 #include "nxd_dhcp_client.h"
 #include "nxd_dns.h"
 
-#include "wiced_sdk.h"
+#include "wiced.h"
 
 #include "sntp_client.h"
 

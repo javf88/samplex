@@ -24,5 +24,5 @@ add_subdirectory(${CMAKE_SOURCE_DIR}/ext/netxduo netxduo)
 
 add_subdirectory(stm32cubef4)
 add_subdirectory(mxchip_bsp)
-add_subdirectory(wiced_sdk)
+add_subdirectory(wiced)
 add_subdirectory(stubs)
