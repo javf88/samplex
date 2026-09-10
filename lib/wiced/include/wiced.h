@@ -3,10 +3,6 @@
 
 #include <stdint.h>
 
-#include "nx_api.h"
-#include "tx_api.h"
-
-// wwd_constants.h
 #define RESULT_ENUM(prefix, name, value) prefix##name = (value)
 
 #define WWD_RESULT_LIST(prefix)                                                                                        \
